@@ -44,25 +44,27 @@ export default function Login() {
   };
 
   return (
-    <div className="">
-      {/* desktop */}
-      <Image
-        className="mx-auto hidden sm:block"
-        src={"/assets/images/appLogo.jpg"}
-        alt={"Polyglot Lingo Logo"}
-        width={200}
-        height={100}
-      />
-      {/* mobile */}
-      <Image
-        className="mx-auto sm:hidden block"
-        src={"/assets/images/appLogo.jpg"}
-        alt={"Polyglot Lingo Logo"}
-        width={160}
-        height={80}
-      />
+    <main className="grid grid-rows-6 h-lvh">
+      <div className="row-span-1 flex items-center">
+        {/* desktop */}
+        <Image
+          className="mx-auto hidden sm:block"
+          src={"/assets/images/appLogo.jpg"}
+          alt={"Polyglot Lingo Logo"}
+          width={200}
+          height={100}
+        />
+        {/* mobile */}
+        <Image
+          className="mx-auto sm:hidden block"
+          src={"/assets/images/appLogo.jpg"}
+          alt={"Polyglot Lingo Logo"}
+          width={160}
+          height={80}
+        />
+      </div>
 
-      <section className="bg-primary py-4 sm:py-10 px-4 border-t border-b border-black">
+      <section className="row-span-4 bg-primary py-4 sm:py-10 px-4 border-t border-b border-black">
         <form
           onSubmit={handleSubmit}
           className="flex flex-col gap-3 max-w-2xl mx-auto"
@@ -103,14 +105,16 @@ export default function Login() {
           )}
         </form>
       </section>
-      <div className="sm:flex justify-between">
-        <Image
-          className="mx-auto sm:mx-0"
-          src={"/assets/images/pmsLogo.png"}
-          alt={"PMS Logo"}
-          width={300} // Set the desired width
-          height={150} // Set the desired height
-        />
+      <div className="row-span-1 sm:flex justify-between">
+        <div>
+          <Image
+            className="mx-auto sm:mx-0"
+            src={"/assets/images/pmsLogo.png"}
+            alt={"PMS Logo"}
+            width={300} // Set the desired width
+            height={150} // Set the desired height
+          />
+        </div>
         <div className="flex justify-around sm:block">
           {" "}
           <select
@@ -119,12 +123,11 @@ export default function Login() {
             className="bg-gradient-to-t from-gray-900 to-gray-400 py-3 px-6 sm:px-8 text-lg text-white w-fit mx-auto mt-2"
           >
             <option value="english">English</option>
-            <option value="not-english">Not English</option>
-            <option value="not-english">Not English</option>
-            <option value="not-english">Not English</option>
+            <option value="Italian">italian</option>
+            <option value="npolish">Polish</option>
           </select>
         </div>
       </div>
-    </div>
+    </main>
   );
 }
